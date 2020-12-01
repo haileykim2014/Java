@@ -2,7 +2,6 @@ package ex13.control;
 
 import java.util.Scanner;
 
-
 public class program {
 
 
