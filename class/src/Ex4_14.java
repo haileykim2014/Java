@@ -13,5 +13,4 @@ public class Ex4_14 {
 		System.out.println("각자리수의 합:"+sum);
 
 	}
-
 }
