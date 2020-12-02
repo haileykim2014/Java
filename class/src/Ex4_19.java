@@ -4,11 +4,12 @@ public class Ex4_19 {
 	public static void main(String[] args) {
 
 
-for(int i=0;i<10;i++) {
-	for(int j=0;j<10;j++) {
-		System.out.println(i+""+j);
-			}
+		String[] members = {"최진혁","최유빈","최이람"};
+		for(int i=0;i<members.length;i++) {
+			String member = members[i];
+			System.out.println(member+"이 상담을 받았습니다.");
+		}
       }
 	
 	}
-}
+
