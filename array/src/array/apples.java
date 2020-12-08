@@ -7,6 +7,6 @@ public class apples {
 		tuna tunaObject = new tuna();
 		tunaObject.simpleMessage();
 		
-		
+	
 	}
 }
