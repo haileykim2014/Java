@@ -1,4 +1,7 @@
+
 package array;
+
+import java.util.Arrays; //ctrl+shift+o
 
 public class Ex5_6 {
 
@@ -9,7 +12,7 @@ public class Ex5_6 {
 			System.out.println(iArr[i]);
 			
 		}
-	
+	System.out.println(Arrays.toString(iArr));
 	}
 
 }
