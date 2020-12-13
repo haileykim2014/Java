@@ -10,6 +10,9 @@ public class Ex5_11 {
 	 score[3] = 100;
 	 
 	 System.out.println(score[3]);
+	 
+	 int value = score[3];
+	 System.out.println(value);
 	}
 
 }
