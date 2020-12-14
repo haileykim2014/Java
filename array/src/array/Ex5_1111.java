@@ -8,7 +8,9 @@ public class Ex5_1111 {
 		char ch = str.charAt(4);
 		System.out.println(ch);
 		String str2 = str.substring(1,4);
-		System.out.println(str2);
+		String str3 = str.substring(1,5); //1~4
+		System.out.println(str2); //bcd
+		System.out.println(str3);
 	}
 
 }
