@@ -11,8 +11,8 @@ public class ex5_8 {
 		};
 		int sum=0;
 		
-		for(int i=0;i<score.length;i++) {
-			for(int j=0;j<score[i].length;j++) {
+		for(int i=0;i<score.length;i++) { //4 0~3까지
+			for(int j=0;j<score[i].length;j++) { //score[0].length는 3(1,2,3)
 				System.out.printf("score[%d][%d]=%d%n",i,j,score[i][j]);
 				sum+=score[i][j];
 			}
