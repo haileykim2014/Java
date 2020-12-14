@@ -21,3 +21,7 @@ public class ex5_8 {
 	}
 
 }
+
+name = hailey
+email = haileykim2014@gmail.com
+
