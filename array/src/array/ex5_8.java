@@ -19,9 +19,6 @@ public class ex5_8 {
 		}
 		System.out.println("sum="+sum);
 	}
-
 }
 
-name = hailey
-email = haileykim2014@gmail.com
 
