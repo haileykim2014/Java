@@ -3,7 +3,7 @@ package array;
 public class ex55_1 {
 	public static void main(String[] args) {
 		 int[][] score = {
-					{ 100, 100, 100}
+					{ 100, 100, 100} //score[0][0], [0][1],[0][2]
 					, { 20, 20, 20}
 					, { 30, 30, 30}
 					, { 40, 40, 40}
