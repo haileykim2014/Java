@@ -2,9 +2,9 @@ package exam03_constructor;
 
 public class Car {
 	String company = "현대자동차";
-	String model;
-	String color;
-	int maxSpeed;
+	String model; // null
+	String color; // null
+	int maxSpeed; // 0
 	
 	Car() {
 	}
