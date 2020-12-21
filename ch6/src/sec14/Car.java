@@ -9,14 +9,22 @@ public class Car {
 	}
 	
 	public void setSpeed(int speed) {
-	 this.speed = speed;	
+		if(speed<0) {
+	 this.speed = 0;
+	 return;
+	}else {
+		this.speed = speed;
 	}
+}
 	public boolean isStop() {
 		return stop;
 	}
 	
 	public void setStop(boolean stop) {
-		 this.stop = stop;	
+		 this.stop = stop;
+		 if(stop==true) {
+			 speed=0;
+		 }
 		}
 	
 	
