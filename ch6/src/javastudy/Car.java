@@ -1,12 +1,10 @@
 package javastudy;
 
 public class Car {
+	public void run() {
+		System.out.println("崔府促");
 	
-	String name;
-	int number;
-	
-	public Car(String n) { //积己磊
-		name = n; //按眉积己
+
 	}
 
 }
