@@ -1,8 +1,8 @@
 package javastudy.java;
 
 public class Car {
-	public Car() {
-		System.out.println("Car의 기본생성자입니다");
+	public void run(){ //run()이라는 메서드
+		System.out.println("Car의 run메소드입니다");
 	}
 
 }
