@@ -8,7 +8,8 @@ public class Ex6_44 {
 		long result2 = mm.subrtact(5L,3L);
 		long result3 = mm.multiply(5L,3L);
 		double result4 = mm.divide(5L,3L);
-		long result5 = mm.max(5, 3);
+		long result5 = mm.max(5, 3); //둘 중에 큰 값을 반환하는 메서드
+		long result6 = mm.min(5, 3);
 		
 		System.out.println(result1);
 		System.out.println(result2);
@@ -16,6 +17,7 @@ public class Ex6_44 {
 		System.out.println(result4);
 		System.out.println(result4);
 		System.out.println(result5);
+		System.out.println(result6);
 	}
 
 }
@@ -30,7 +32,9 @@ class MyJava{ //메서드는 클래스영역에만 정의가능
 		
 		return a > b ? a : b;
 		}
-	
+	long min(long a, long b) {
+		return a<b?a:b;
+	}
 	long subrtact(long a, long b) {return a-b;}
 	long multiply(long a, long b) {return a*b;}
 	double divide(double a , double b) {
