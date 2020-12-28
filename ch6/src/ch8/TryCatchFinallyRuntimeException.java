@@ -16,10 +16,16 @@ public class TryCatchFinallyRuntimeException {
 		System.out.println("java TryCatchFinallyRuntimeException num1 num2 ");
 		return;
 	}
+	try {
 		int value1 = Integer.parseInt(data1);
 		int value2 = Integer.parseInt(data2);
 		int result = value1+value2;
 		System.out.println(data1+"+"+data2+"="+result);
-		
+	}catch(NumberFormatException e) {
+		System.out.println("숫자로 변환할수없습니다.");
+	}finally{
+		System.out.println("다시실행해주세요");
+	}
+	}
 }
-}
+
