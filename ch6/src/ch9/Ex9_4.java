@@ -1,5 +1,7 @@
 package ch9;
 
+import java.util.*;
+
 class Card{
 	String kind;
 	int number;
@@ -11,6 +13,11 @@ class Card{
 	Card(String kind,int number){
 		this.kind = kind;
 		this.number = number;
+	}
+	//equls()를 오버라이딩하면 hashcode()도 오버라이딩해야한다.
+	
+	public int hashCode() {
+		return Objects.hash(kind,number);
 	}
 	
 	public boolean equals(Object obj) {
