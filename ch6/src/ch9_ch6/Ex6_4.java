@@ -9,7 +9,7 @@ public class Ex6_4 {
 		long result2 = mm.subtract(5L,3L);
 		long result3 = mm.multiply(5L,3L);
 		double result4 = mm.divide(5L,3L);
-		mm.printGugudan(12);
+		mm.printGugudan(5);
 		
 		System.out.println("max(5L,3L)="+result);
 		System.out.println("add(5L,3L)="+result1);
