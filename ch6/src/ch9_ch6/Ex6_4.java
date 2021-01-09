@@ -9,16 +9,25 @@ public class Ex6_4 {
 		long result2 = mm.subtract(5L,3L);
 		long result3 = mm.multiply(5L,3L);
 		double result4 = mm.divide(5L,3L);
+		mm.printGugudan(12);
 		
 		System.out.println("max(5L,3L)="+result);
 		System.out.println("add(5L,3L)="+result1);
 		System.out.println("subtract(5L,3L)="+result2);
 		System.out.println("multiply(5L,3L)="+result3);
-		System.out.println("divide(5L,3L)="+result4);		
+		System.out.println("divide(5L,3L)="+result4);	
+		System.out.println();
 	}
 }
 
 class MyMath{ //클래스작성
+	void printGugudan(int dan) {
+		if(!(2<=dan && dan <= 9))
+			return; //입력받은 단이 2~9단이 아니면,메서드종료하고 돌아가기
+		for(int i=1;i<=9;i++) {
+			System.out.printf("%d * %d = %d%n", dan, i, dan*i);
+		}
+	}
 	long add(long a, long b) { //메서드작성
 		long result = a + b;
 		return result;
