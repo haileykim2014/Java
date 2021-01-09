@@ -4,6 +4,7 @@ public class Ex6_4 {
 
 	public static void main(String[] args) {
 		MyMath mm = new MyMath(); //객체생성
+		long result5 = mm.min(3, 5);
 		long result = mm.max(5, 3);
 		long result1 = mm.add(5L,3L); //객체사용(객체의 메서드사용)
 		long result2 = mm.subtract(5L,3L);
@@ -11,6 +12,7 @@ public class Ex6_4 {
 		double result4 = mm.divide(5L,3L);
 		mm.printGugudan(5);
 		
+		System.out.println(result5);
 		System.out.println("max(5L,3L)="+result);
 		System.out.println("add(5L,3L)="+result1);
 		System.out.println("subtract(5L,3L)="+result2);
@@ -28,6 +30,15 @@ class MyMath{ //클래스작성
 			System.out.printf("%d * %d = %d%n", dan, i, dan*i);
 		}
 	}
+	long min(long a, long b) {
+		long result = 0;
+		if(a < b) {
+			result = a;
+		}else {
+			result = b;
+		}
+		return result;
+	}
 	long add(long a, long b) { //메서드작성
 		long result = a + b;
 		return result;
@@ -36,9 +47,9 @@ class MyMath{ //클래스작성
 	long max(long a, long b){
 		long result = 0;
 		if(a > b) {
-			result = a;
+			result = a; // 조건이 참일떄만 실행
 		}else {
-			result = b;
+			result = b; //조건식이 거짓일때 실행
 		}
 		return result;
 		// return a > b ? a : b;
