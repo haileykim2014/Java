@@ -2,18 +2,38 @@ package ch11;
 
 import java.util.*;
 
-public class Ex11_13 {
+public class Ex11_16 {
 
 	public static void main(String[] args) {
-		//1부터 45까지의 정수를 6개골라서 set에 저장후 출력
-//		Set set = new HashSet(); //정렬안됨
-		Set set = new TreeSet();
-		for(int i=0; set.size()<6;i++) {
-			int num = (int)(Math.random()*45)+1;
-			set.add(num);
-		}
-		System.out.println(set);
-
-	}
+		HashMap map = new HashMap();
+		map.put("myId","1234");
+		map.put("asdf","1111");
+		System.out.println(map);
+		map.put("asdf", "1234"); //마지막값으로 나온다.
+		System.out.println(map);
+		
+		Scanner s = new Scanner(System.in);
+		
+		while(true) {
+			System.out.println("id와 password를 입력해주세요");
+			System.out.print("id : ");
+			String id = s.nextLine().trim();
+			
+			System.out.print("password : ");
+			String password = s.nextLine().trim();
+			System.out.println();
+			
+			if(!map.containsKey(id)) {
+				System.out.println("입력하신 id는 존재하지 않습니다. 다시 입력해주세요");
+				continue;
+			}
+			if(!(map.get(id)).equals(password)) {
+				System.out.println("비밀번호가 일치하지 않습니다. 다시 입력해주세요");
+			}else {
+				System.out.println("id와 비밀번호가 일치합니다.");
+				break;
+			}
+		}//while
+	}//main의 끝
 
 }
