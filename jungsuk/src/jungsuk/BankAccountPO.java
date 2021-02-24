@@ -1,29 +1,27 @@
 package jungsuk;
 
 public class BankAccountPO {
-    static int balance = 0;     // 예금 잔액
+	static int balance = 0;
+	public static void main(String[] args) {
+		deposit(10000); // deposit메소드호출
+		checkMybalance(); //checkMybalance메소드호출
+		
+		withdraw(3000);
+		checkMybalance();
+		
+	}
+	public static int deposit(int amount) { //메소드생성
+		balance += amount;
+		return balance;
+	}
 
-    public static void main(String[] args) {
-        deposit(10000);
-        checkMyBalance();
-        
-        withdraw(3000);
-        checkMyBalance(); 
-    }
-
-    public static int deposit(int amount) {
-        balance += amount;
-        return balance;
-    }    
-
-    public static int withdraw(int amount) {
-        balance -= amount;
-        return balance;
-    }
-
-    public static int checkMyBalance() {
-        System.out.println("잔액 : " + balance);
-        return balance;
-    }
-
+	public static int withdraw(int amount) {//메소드생성
+		balance -= amount;
+		return balance;
+	}
+	public static int checkMybalance() {//메소드생성
+		System.out.println(balance);
+		return balance;
+	}
 }
+	
