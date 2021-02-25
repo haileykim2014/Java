@@ -12,8 +12,6 @@ class Hello {
 		avg = total / 3;
 		
 		
-		
-
 		System.out.printf("total is %d\n", total);
 
 		}
