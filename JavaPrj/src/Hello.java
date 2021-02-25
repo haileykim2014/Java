@@ -10,8 +10,7 @@ class Hello {
 
 		total = kor + eng + math;
 		avg = total / 3;
-		
-		
+				
 		System.out.printf("total is %d\n", total);
 
 		}
