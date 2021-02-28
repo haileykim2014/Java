@@ -29,6 +29,6 @@ class OneClassEncapsulation {
     public static void main(String[] args) {
         ColdPatient suf = new ColdPatient();
 
-        suf.takeSinus(new SinusCap());
+        suf.takeSinus(new SinusCap()); //참조변수없이 인스턴스생성
     }
 }
