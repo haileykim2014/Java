@@ -15,17 +15,18 @@ public class test {
 		
 		//2.J부터 A까지 출력
 		for(int i=0;i<10;i++) {
-			nums[i] =(char)('J'-i);
-			System.out.printf("%c",nums[i]);			
+			nums[i] =(char)('J'-i); //J부터 A까지넣기
+			System.out.printf("%c",nums[i]); //출력			
 		}System.out.println();
 		
 		int tmp;
-		for(int i=0;i<10;i++) {
-			tmp = nums[i];
+		for(int i=0;i<5;i++) {
+			tmp = nums[i]; // 값바꾸기
 			nums[i] = nums[9-i];
-			nums[9-i] = nums[i];
+			nums[9-i] = nums[i];//nums[0]와 nums[9]가 맞바꾼상황
 			System.out.printf("%c",nums[i]);
+			//양쪽값끼리바꾸므로 5번이면 다시A~J순으로출력됨
+			
 	}
-
 }
 }
