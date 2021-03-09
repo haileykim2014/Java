@@ -10,19 +10,51 @@ public class Program2 {
 		
 		//1. 문자 10개를 저장하기 위한 문자배열 chs를 만드시오.
 		char[] chs = new char[10];
+
+		for (int i = 0; i < 10; i++)
+			chs[i] = 'A';
+
+		// 3. chs 배열에 담겨진 값 모두 출력
+		for (int i = 0; i < 10; i++)
+			System.out.printf("%c ", chs[i]);
+		System.out.println();
+
+		for (int i = 0; i < 10; i++) //건들이지말것
+			chs[i] = (char) ('J' - i);// 인덱스내림차순
+
+		// A와 Z의 자리를 바꾸자
+		//[J I H G F E D C B A ]
+		//chs[0] <-> chs[9]
+		//1. chs
 		
-		//2. chs 배열에 문자 'A'
-		for(int i=0;i<10;i++)
-			chs[i]='A';		
-//		chs[0] = A;
-//		chs[1] = A;
-//		chs[2] = A;
-//		chs[3] = A;
-//		chs[4] = A;				
+		for (int i = 0; i < 10; i++)
+			System.out.printf("%c ", chs[i]);
+
+		System.out.println();
+
+		char temp;
 		
-		//3. chs 배열에 담겨진 값들을 모두 출력하시오. 단, 모양은 다음처럼 출력하시오.
-		for(int i=0;i<10;i++)
-		System.out.printf("%c ",chs[i]);
+		temp = chs[0];
+		chs[0] = chs[9];
+		chs[9] = temp;
 		
+			for (int i = 0; i < 10; i++)
+			System.out.printf("%c ", chs[i]);
+			System.out.println();
+
+		temp = chs[1];
+		chs[1] = chs[8];
+		chs[8] = temp;
+		
+
+		char[] tmp = new char[10];
+		for (int i = 0; i < 5; i++) {			
+			temp = chs[i];
+			chs[i] = chs[9-i];
+			chs[9-i] = temp;
+			}			
+		for (int i = 0; i < 10; i++)
+		System.out.printf("%c ", chs[i]);
+				
 	}
 }
