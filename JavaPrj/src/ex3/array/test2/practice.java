@@ -8,28 +8,89 @@ public class practice {
 		
 		//1.정수 10개짜리 nums배열을 생성한다. 단, 1,2,3,4~10
 
-		int[] nums = {1,2,3,4,5,6,7,8,9,10};
+		int[] nums = {10,2,9,1,4,6,8,3,5,7};
 		
-		//섞는다.
-		//랜덤값을 얻어서
-		Random rand = new Random();
-		
-		for(int i=0;i<100;i++) {
-			int idx1 = rand.nextInt(10); //0~9
-			int idx2 = rand.nextInt(10); //0~9
-			System.out.printf("idx1: %d, idx2:%d\n",idx1,idx2);
+
+			for(int i=0;i<9;i++)
+				if(nums[i]>nums[i+1]) {
+					int temp;
+					temp = nums[i];
+					nums[i] = nums[i+1];
+					nums[i+1] = temp;
+				}
+			for(int i=0;i<10;i++) {
+				System.out.print(nums[i]);
+				
+				if(i<9)
+					System.out.print(",");
+				}
+				System.out.println();
 			
-		//두 인덱스의 위치를 바꿔라.		
-			int temp;
-			temp = nums[idx1];
-			nums[idx1] = nums[idx2];
-			nums[idx2] = temp;		
-			}
-		for(int i=0;i<10;i++) {
-			System.out.print(nums[i]);
 			
-			if(i<9)
-				System.out.print(",");
-		}
+			
+			for(int i=0;i<8;i++)
+				if(nums[i]>nums[i+1]) {
+					int temp;
+					temp = nums[i];
+					nums[i] = nums[i+1];
+					nums[i+1] = temp;
+				}
+			for(int i=0;i<10;i++) {
+				System.out.print(nums[i]);
+				
+				if(i<9)
+					System.out.print(",");
+				}
+				System.out.println();
+				
+				
+			for(int i=0;i<7;i++)
+				if(nums[i]>nums[i+1]) {
+					int temp;
+					temp = nums[i];
+					nums[i] = nums[i+1];
+					nums[i+1] = temp;
+				}
+			for(int i=0;i<10;i++) {
+				System.out.print(nums[i]);
+				
+				if(i<9)
+					System.out.print(",");
+				}
+				System.out.println();
+				
+				
+			for(int i=0;i<6;i++)
+				if(nums[i]>nums[i+1]) {
+					int temp;
+					temp = nums[i];
+					nums[i] = nums[i+1];
+					nums[i+1] = temp;
+				}
+			for(int i=0;i<10;i++) {
+				System.out.print(nums[i]);
+				
+				if(i<9)
+					System.out.print(",");
+				}
+				System.out.println();
+				
+			
+			for(int i=0;i<5;i++)
+				if(nums[i]>nums[i+1]) {
+					int temp;
+					temp = nums[i];
+					nums[i] = nums[i+1];
+					nums[i+1] = temp;
+				}
+			for(int i=0;i<10;i++) {
+				System.out.print(nums[i]);
+				
+				if(i<9)
+					System.out.print(",");
+				}
+				System.out.println();
+			
+				
 	}
 }
