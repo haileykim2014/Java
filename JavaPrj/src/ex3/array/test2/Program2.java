@@ -15,7 +15,6 @@ public class Program2 {
 		String n1 = "홍길동";
 		String n2 = "홍길동";
 
-		
 		String n3 = new String("홍길동");
 		String n4 = new String("홍길동"); //객채비교
 		
@@ -30,7 +29,7 @@ public class Program2 {
 		System.out.println(fileName.length()); // 9
 		System.out.println(fileName.indexOf(".")); //"."가 포함되었는지? 5
 		System.out.println(fileName.substring(3)); //to.jpg
-		System.out.println(fileName.substring(3,2)); // 에러 
+//		System.out.println(fileName.substring(3,2)); // 에러 
 		System.out.println(fileName.substring(3,5)); // 인덱스3~4까지 to 
 //		
 		//위의 파일명에서 .이있는곳까지의 문자열을 출력(단.제외)
@@ -49,7 +48,8 @@ public class Program2 {
 		
 		
 		String[] names = new String[] {"강호동","유재석","하하","김지호","김현준","김태희","박민정"};
-
+		
+		
 		Random rand = new Random();
 		
 		for(int i=0; i<100;i++) {
@@ -64,7 +64,7 @@ public class Program2 {
 		}
 		
 		for(int i=0;i<7;i++) {
-			System.out.printf("%s",names[i]);
+			System.out.printf("\"%s\"",names[i]);
 			if(i<7-1)
 				System.out.print(",");		
 		}		
