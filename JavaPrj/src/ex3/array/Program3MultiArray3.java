@@ -2,6 +2,7 @@ package ex3.array;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class Program3MultiArray3 {
@@ -20,7 +21,7 @@ public class Program3MultiArray3 {
 			String line;
 			while(scan.hasNextLine()) {
 				line = scan.nextLine();
-				count ++;		
+				count++;		
 			}			
 			
 			scan.close();
@@ -34,16 +35,18 @@ public class Program3MultiArray3 {
 			rows = new String[count][];
 			FileInputStream fis = new FileInputStream("res/corona.csv");
 			Scanner scan = new Scanner(fis);
-
+			/*
+			 * 0번째방 : {"a", "b", "c"}
+			 * 1번째방 : {"d", "e", "f"}
+			 * 
+			 * */
 			String line;
-
+			
 			scan.nextLine(); // 담을필요없다.한줄버리기
-
 			for (int i = 0; i < count; i++) { // 한줄 불러오고, 나눠서 배열에넣기
 				line = scan.nextLine(); // 한줄불러오기
 				rows[i] = line.split(","); // 불러온것 쉼표로 구분
 			}
-			
 			scan.close();
 			fis.close();
 		}		
@@ -66,13 +69,12 @@ public class Program3MultiArray3 {
 			for(int i=0;i<count;i++)
 			total += Integer.parseInt(rows[i][3]);	//문자열을 정수로 형변환
 			System.out.println(total);
-			System.out.println();
-		} 		
-
-			
-		//--------------------------------------------------------------		
-		//일별 가장 많은 검사진행수는 ?
-		{	int max = 0;
+		} 
+		
+		//--------------------------------------------------------------	
+		//일별 가장 많은 검사진행 수는 ? 
+		{	
+			int max = 0;
 			int current;
 					
 			for(int i =0; i<count;i++) {
@@ -82,7 +84,51 @@ public class Program3MultiArray3 {
 				}
 			System.out.println(max);
 			System.out.println();
-		}	
-	}	
-	
+		
+		
+		//검사진행수가 가장 많았던 날짜는 ?
+		
+			String date ="";
+			int idx = 0;
+
+			for(int i=0;i<count;i++) {
+				if(rows[i][3].equals(String.valueOf(max))) //세미콜론주의
+				idx = i;
+				}
+			date = rows[idx][0];
+			System.out.println(date);
+		}
+		//확진자 수가 늘어난 일자와 수를 출력하시오.
+		{
+			String date = "";
+			int diff = 0;
+			
+			int old = Integer.parseInt(rows[0][1]); //이전확진자수
+			int current = 0; //현재확진자 수
+			int index = 0;			
+			
+			for(int i=1;i<count;i++) {
+				current = Integer.parseInt(rows[i][1]);
+				
+				if(old != current) {
+					
+					diff = current - old;
+					date = rows[i][0];
+			
+					old = current;
+					
+					//년 월 일로 출력하기
+					date = date.substring(0,4)+"년"+
+							date.substring(5,7)+"월"+
+							date.substring(8,10)+"일";
+					System.out.printf("%d : %s, %d\n",index+++1,date,diff);
+					}			
+			}
+			
+		}
+		
+		
+		
+		
 }
+	}
