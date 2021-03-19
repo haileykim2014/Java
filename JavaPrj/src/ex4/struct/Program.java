@@ -28,7 +28,7 @@ public class Program {
       }
       //--------------------------------------------------------
       // Covid19를 로드하는 코드
-      Covid19[] list = new Covid19[count];
+      Covid19[] list = new Covid19[count]; //참조형배열
       {
          FileInputStream fis = new FileInputStream("res/corona.csv");
          Scanner fscan = new Scanner(fis);
@@ -40,7 +40,9 @@ public class Program {
          for(int i=0; i<count; i++) {
             line = fscan.nextLine();
             String[] tokens = line.split(",");
-            Covid19 covid = new Covid19(); //covid는 지역화된 변수라 }만나면 사라지고 반복되면서 다시생긴다
+            Covid19 covid = new Covid19(); 
+            //객체생성 후 임시변수에 대입
+            //covid는 지역화된 변수라 }만나면 사라지고 반복되면서 다시생긴다 /덮어씌우는게아니다.
 
             covid.date = tokens[0];
             covid.cases = Integer.parseInt(tokens[1]); //int = String
@@ -54,8 +56,9 @@ public class Program {
             covid.pubDate = tokens[9];
             
             list[i] = covid;        
-            
-//            list[i] = covid.date; //covid.date는 String 자료형불일치            
+           // 자료형이 일치한다.둘다 Covid19형이기때문에 대입이가능하다.
+           // list[i] = covid.date; 
+           //covid.date는 String 자료형불일치            
          }
          
 
