@@ -2,21 +2,33 @@ package ex7.상속.IS_A;
 
 public class NewExam extends Exam {// Exam의 내용을 확장하자.상속
 
-	private int com;
+	private int com;	
 
 	public NewExam() {
-		super();// 부모클래스의 생성자호출, 가장먼저 호출되어야함//Exam();자동으로 호출된것
-		com = 10;
+		this(1);
 	}
 
+	public NewExam(int value) {
+		//super();
+		super(value);		
+		this.com = value;
+	}
+	
+	public NewExam(int kor,int eng,int math,int com) {
+		//super();
+		super(kor,eng,math);
+		this.com = com;
+	}
+	
 	@Override // ctrl + space
 	public int total() {
-		return super.total() + com;
+		return super.total() + com;//부모토탈에 + 내것
 	}
-
+	
 	@Override
 	public float avg() {
-		return /* this */total() / 4.0f;
+		
+		return /*this*/total() / 4.0f;//내평균
 	}
 
 }
